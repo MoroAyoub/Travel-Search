@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flight Search</h1>
+        <form id="searchForm">
+            <div class="form-group">
+                <label for="departureInput">Departure (IATA code):</label>
+                <input type="text" id="departureInput" placeholder="e.g., JFK" required>
+            </div>
+            <div class="form-group">
+                <label for="destinationInput">Destination (IATA code):</label>
+                <input type="text" id="destinationInput" placeholder="e.g., LAX" required>
+            </div>
+            <div class="form-group">
+                <label for="dateInput">Date:</label>
+                <input type="date" id="dateInput" required>
+            </div>
+            <button type="submit">Search Flights</button>
+        </form>
+        <div id="results"></div>
+        <div id="pagination">
+            <button id="prevPage" disabled>Previous</button>
+            <span id="pageInfo"></span>
+            <button id="nextPage" disabled>Next</button>
+        </div>
+    </div>
+    <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+        <div class="spinner"></div>
+        <p>Searching for flights...</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
