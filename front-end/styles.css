@@ -47,23 +47,30 @@ h1 {
 label {
     display: block;
     margin-bottom: 5px;
-    color: var(--secondary-color);
     font-weight: bold;
+    color: #333;
 }
 
 input[type="text"],
 input[type="date"] {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #bdc3c7;
+    padding: 12px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 15px;
+}
+
+input[type="text"]:hover,
+input[type="date"]:hover {
+    border-color: var(--primary-color);
 }
 
 input[type="text"]:focus,
 input[type="date"]:focus {
     border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
     outline: none;
 }
 
